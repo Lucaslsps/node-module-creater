@@ -9,7 +9,7 @@ class <<MODULE_UC_NAME>>Repository implements I<<MODULE_UC_NAME>>Repository {
     this.ormRepository = getRepository(<<MODULE_UC_NAME>>);
   }
 
-  public async ListAll(): Promise<<<MODULE_UC_NAME>>[]> {
+  public async listAll(): Promise<<<MODULE_UC_NAME>>[]> {
     const list<<MODULE_UC_NAME>> = await this.ormRepository.find();
 
     return list<<MODULE_UC_NAME>>;
