@@ -14,13 +14,13 @@ const <<MODULE_LC_NAME>>Controller = new <<MODULE_UC_NAME>>Controller();
     [Segments.BODY]: {
     },
   }),
-  <<MODULE_UC_NAME>>Controller.create
+  <<MODULE_LC_NAME>>Controller.create
 );
 
 <<MODULE_LC_NAME>>Router.get(
   '/',
   ensureAuthenticated,
-  <<MODULE_UC_NAME>>Controller.listAll
+  <<MODULE_LC_NAME>>Controller.listAll
 );
 
 export default <<MODULE_LC_NAME>>Router;
