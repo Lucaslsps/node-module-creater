@@ -1,0 +1,11 @@
+import { Request, Response } from 'express';
+import { container } from 'tsyringe';
+
+export default class <<MODULE_UC_NAME>>Controller {
+  public async create(request: Request, response: Response): Promise<Response> {
+      return response.json({})
+  }
+  public async listAll(request: Request, response: Response): Promise<Response> {
+      return response.json({})
+  }
+}

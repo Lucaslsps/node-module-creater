@@ -1,0 +1,12 @@
+import { Entity, Column, PrimaryColumn } from 'typeorm-spanner';
+
+@Entity('<<MODULE_SC_NAME>>')
+class <<MODULE_UC_NAME>> {
+  @PrimaryColumn()
+  id: string;
+
+  @Column()
+  name: string;
+}
+
+export default <<MODULE_UC_NAME>>;

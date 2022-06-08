@@ -1,0 +1,28 @@
+import { getRepository, Repository } from 'typeorm-spanner';
+import I<<MODULE_UC_NAME>>Repository from '@modules/<<MODULE_LC_NAME>>/repositories/I<<MODULE_UC_NAME>>Repository';
+import <<MODULE_UC_NAME>> from '../entities/<<MODULE_UC_NAME>>';
+
+class <<MODULE_UC_NAME>>Repository implements I<<MODULE_UC_NAME>>Repository {
+  private ormRepository: Repository<<<MODULE_UC_NAME>>>;
+
+  constructor() {
+    this.ormRepository = getRepository(<<MODULE_UC_NAME>>);
+  }
+
+  public async ListAll(): Promise<<<MODULE_UC_NAME>>[]> {
+    const list<<MODULE_UC_NAME>> = await this.ormRepository.find();
+
+    return list<<MODULE_UC_NAME>>;
+  }
+
+  public async create(
+    <<MODULE_LC_NAME>>Data: <<MODULE_UC_NAME>>
+  ): Promise<<<MODULE_UC_NAME>>> {
+    const <<MODULE_LC_NAME>> = this.ormRepository.create(<<MODULE_LC_NAME>>Data);
+    await this.ormRepository.save(<<MODULE_LC_NAME>>);
+
+    return <<MODULE_LC_NAME>>;
+  }
+}
+
+export default <<MODULE_UC_NAME>>Repository;

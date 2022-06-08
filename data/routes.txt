@@ -1,0 +1,26 @@
+import { Router } from 'express';
+import { celebrate, Segments, Joi } from 'celebrate';
+
+//import ensureAuthenticated from '@shared/infra/http/middlewares/ensureAuthenticated';
+import <<MODULE_UC_NAME>>Controller from '../controllers/<<MODULE_UC_NAME>>Controller';
+
+const <<MODULE_LC_NAME>>Router = Router();
+const <<MODULE_LC_NAME>>Controller = new <<MODULE_UC_NAME>>Controller();
+
+<<MODULE_LC_NAME>>Router.post(
+  '/',
+  ensureAuthenticated,
+  celebrate({
+    [Segments.BODY]: {
+    },
+  }),
+  <<MODULE_UC_NAME>>Controller.create
+);
+
+<<MODULE_LC_NAME>>Router.get(
+  '/',
+  ensureAuthenticated,
+  <<MODULE_UC_NAME>>Controller.listAll
+);
+
+export default <<MODULE_LC_NAME>>Router;

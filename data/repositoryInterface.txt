@@ -1,0 +1,6 @@
+import <<MODULE_UC_NAME>> from '../infra/typeorm/entities/<<MODULE_UC_NAME>>';
+
+export default interface I<<MODULE_UC_NAME>>Repository {
+  create(<<MODULE_LC_NAME>>: <<MODULE_UC_NAME>>): Promise<<<MODULE_UC_NAME>> | undefined>;
+  listAll(): Promise<<<MODULE_UC_NAME>>[]>;
+}
